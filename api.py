@@ -115,7 +115,16 @@ def search_avito(city: str, max_price: Optional[int] = None, limit: int = 30) ->
         
         return apartments
 
-
+@app.get("/")
+async def root():
+    return {
+        "status": "ok",
+        "message": "Avito Parser API",
+        "endpoints": {
+            "health": "/health",
+            "search": "/search (POST)"
+        }
+    }
 @app.get("/health")
 async def health():
     return {"status": "ok", "mode": "demo" if IS_RENDER else "selenium"}
