@@ -1,0 +1,16 @@
+# Виртуальное окружение
+.venv/
+venv/
+env/
+
+# Файлы IDE
+.idea/
+.vscode/
+
+# Временные и локальные файлы
+__pycache__/
+*.pyc
+*.pyo
+*.db
+.DS_Store
+avito_apartments.json
